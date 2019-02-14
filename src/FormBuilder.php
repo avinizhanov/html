@@ -1185,10 +1185,10 @@ class FormBuilder
     protected function getUrlAction($options)
     {
         if (is_array($options)) {
-            return $this->url->to($options[0], array_slice($options, 1));
+            return $this->url->to($options[0], array_slice($options, 1), [], false);
         }
 
-        return $this->url->to($options);
+        return $this->url->to($options, [], false);
     }
 
     /**
@@ -1201,10 +1201,10 @@ class FormBuilder
     protected function getRouteAction($options)
     {
         if (is_array($options)) {
-            return $this->url->route($options[0], array_slice($options, 1));
+            return $this->url->route($options[0], array_slice($options, 1), [], false);
         }
 
-        return $this->url->route($options);
+        return $this->url->route($options, [], false);
     }
 
     /**
@@ -1217,10 +1217,10 @@ class FormBuilder
     protected function getControllerAction($options)
     {
         if (is_array($options)) {
-            return $this->url->action($options[0], array_slice($options, 1));
+            return $this->url->action($options[0], array_slice($options, 1), [], false);
         }
 
-        return $this->url->action($options);
+        return $this->url->action($options, [], false);
     }
 
     /**
