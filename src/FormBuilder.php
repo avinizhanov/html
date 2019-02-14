@@ -1188,7 +1188,7 @@ class FormBuilder
             return $this->url->to($options[0], array_slice($options, 1), [], false);
         }
 
-        return $this->url->to($options, [], false);
+        return $options;
     }
 
     /**
